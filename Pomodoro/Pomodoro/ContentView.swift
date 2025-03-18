@@ -10,47 +10,70 @@ import SwiftData
 import UserNotifications
 
 struct ContentView: View {
+    @AppStorage("timerDuration") private var timerDuration = 1500
+    @State private var showSettings = false  // Controls the settings modal
     @State private var timeRemaining = 1500
     @State private var timerActive: Bool = false
     @State private var timer: Timer?
-
+    
+    @Environment(\.modelContext) private var context
     var body: some View {
-        VStack(spacing: 40) {
-            // Timer display text
-            Text(formatTime(timeRemaining)).font(.system(size: 96))
-            
-            // Primary Start Button
-            Button(action: startTimer) {
-                Text(timerActive ? "Running..." : "Start")
-                    .frame(width: 200, height: 50)
-                    .background(timerActive ? Color.gray : Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(12)
-            }
-            .disabled(timerActive) // Disable while running
-            
-            // Secondary Controls
-            HStack(spacing: 20) {
-                Button("Pause") {
-                    pauseTimer()
+        NavigationView {
+            ZStack{
+                VStack(spacing: 40) {
+
+                    Spacer()
+                    // Timer display text
+                    Text(formatTime(timeRemaining)).font(.system(size: 96))
+                    
+                    // Primary Start Button
+                    Button(action: startTimer) {
+                        Text(timerActive ? "Running..." : "Start")
+                            .frame(width: 220, height: 50)
+                            .background(timerActive ? Color.gray : Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(12)
+                    }
+                    .disabled(timerActive) // Disable while running
+                    
+                    // Secondary Controls
+                    HStack(spacing: 20) {
+                        Button("Pause") {
+                            pauseTimer()
+                        }
+                        .frame(width: 100, height: 44)
+                        .background(Color.orange)
+                        .foregroundColor(.white)
+                        .cornerRadius(12)
+                        .disabled(!timerActive) // Only enable when running
+                        
+                        Button("Reset") {
+                            resetTimer()
+                        }
+                        .frame(width: 100, height: 44)
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .cornerRadius(12)
+                    }
+                    
+                    Spacer()
+                    
+                    HStack {
+                        Spacer()
+                        NavigationLink(destination: SettingsView()) {
+                            Image(systemName: "gearshape")
+                                .padding()
+                                .background(Color.clear)
+                        }
+                    }
                 }
-                .frame(width: 100, height: 44)
-                .background(Color.orange)
-                .foregroundColor(.white)
-                .cornerRadius(12)
-                .disabled(!timerActive) // Only enable when running
-                
-                Button("Reset") {
-                    resetTimer()
-                }
-                .frame(width: 100, height: 44)
-                .background(Color.red)
-                .foregroundColor(.white)
-                .cornerRadius(12)
             }
-    }
-    .padding()
-        
+            .padding()
+            .onAppear {
+                        timeRemaining = timerDuration  // Sync stored duration on launch
+            }
+        }
+            
 }
 
     // Helper to format seconds into mm:ss
@@ -66,11 +89,17 @@ struct ContentView: View {
             if timeRemaining > 0 {
                 timeRemaining -= 1
             } else {
-                timer?.invalidate()
-                timerActive = false
-                notifyTimerFinished()
+                timerExpired()
             }
         }
+    }
+    
+    func timerExpired() {
+        timer?.invalidate()
+        timerActive = false
+        notifyTimerFinished()
+        saveCompletedSession()
+        
     }
     
     private func pauseTimer() {
@@ -81,7 +110,7 @@ struct ContentView: View {
     private func resetTimer() {
         timer?.invalidate()
         timerActive = false
-        timeRemaining = 1500
+        timeRemaining = timerDuration
     }
     
     func notifyTimerFinished() {
@@ -101,6 +130,25 @@ struct ContentView: View {
             }
         }
     }
+    
+    func saveCompletedSession() {
+        let session = PomodoroSession(duration: 1500)
+        context.insert(session)
+        
+        let newCount = TimerSyncManager.shared.getCompletedSessions() + 1
+        TimerSyncManager.shared.saveCompletedSessions(newCount)
+
+        do {
+            try context.save()
+            print("Session saved and synced!")
+        } catch {
+            print("Error saving session: \(error.localizedDescription)")
+        }
+    }
+}
+
+#Preview {
+    ContentView()
 }
 
 

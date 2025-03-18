@@ -46,6 +46,7 @@ struct PomodoroApp: App {
             let config = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
             
             do {
+                print("Creating ModelContainer")
                 return try ModelContainer(for: schema, configurations: config)
             } catch {
                 fatalError("Failed to create ModelContainer: \(error)")
