@@ -6,7 +6,34 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E5D985D52D8956AC006FC6EC /* Wrist Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E5D985B22D8956AC006FC6EC /* Wrist Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E5D985E12D895881006FC6EC /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D985DF2D89587B006FC6EC /* WatchConnectivityManager.swift */; };
+		E5D985E52D8A3A0C006FC6EC /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D985DF2D89587B006FC6EC /* WatchConnectivityManager.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
+		E5D985C22D8956AC006FC6EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5F731382D87F97B009458E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5D985B12D8956AC006FC6EC;
+			remoteInfo = "Wrist Watch App";
+		};
+		E5D985CC2D8956AC006FC6EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5F731382D87F97B009458E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5D985B12D8956AC006FC6EC;
+			remoteInfo = "Wrist Watch App";
+		};
+		E5D985D32D8956AC006FC6EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5F731382D87F97B009458E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5D985B12D8956AC006FC6EC;
+			remoteInfo = "Wrist Watch App";
+		};
 		E5F731552D87F97C009458E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E5F731382D87F97B009458E6 /* Project object */;
@@ -23,7 +50,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E5F731A52D895540009458E6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E5D985D52D8956AC006FC6EC /* Wrist Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E5D985B22D8956AC006FC6EC /* Wrist Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wrist Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D985C12D8956AC006FC6EC /* Wrist Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wrist Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D985CB2D8956AC006FC6EC /* Wrist Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wrist Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D985DF2D89587B006FC6EC /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
 		E5F731402D87F97B009458E6 /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F731542D87F97C009458E6 /* PomodoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomodoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F7315E2D87F97C009458E6 /* PomodoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomodoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +85,21 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		E5D985B32D8956AC006FC6EC /* Wrist Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Wrist Watch App";
+			sourceTree = "<group>";
+		};
+		E5D985C42D8956AC006FC6EC /* Wrist Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Wrist Watch AppTests";
+			sourceTree = "<group>";
+		};
+		E5D985CE2D8956AC006FC6EC /* Wrist Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Wrist Watch AppUITests";
+			sourceTree = "<group>";
+		};
 		E5F731422D87F97B009458E6 /* Pomodoro */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -61,6 +121,27 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E5D985AF2D8956AC006FC6EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D985BE2D8956AC006FC6EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D985C82D8956AC006FC6EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5F7313D2D87F97B009458E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,12 +166,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5D985E42D8A39A7006FC6EC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E5D985DF2D89587B006FC6EC /* WatchConnectivityManager.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		E5F731372D87F97B009458E6 = {
 			isa = PBXGroup;
 			children = (
+				E5D985E42D8A39A7006FC6EC /* Shared */,
 				E5F731422D87F97B009458E6 /* Pomodoro */,
 				E5F731572D87F97C009458E6 /* PomodoroTests */,
 				E5F731612D87F97C009458E6 /* PomodoroUITests */,
+				E5D985B32D8956AC006FC6EC /* Wrist Watch App */,
+				E5D985C42D8956AC006FC6EC /* Wrist Watch AppTests */,
+				E5D985CE2D8956AC006FC6EC /* Wrist Watch AppUITests */,
 				E5F731412D87F97B009458E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +194,9 @@
 				E5F731402D87F97B009458E6 /* Pomodoro.app */,
 				E5F731542D87F97C009458E6 /* PomodoroTests.xctest */,
 				E5F7315E2D87F97C009458E6 /* PomodoroUITests.xctest */,
+				E5D985B22D8956AC006FC6EC /* Wrist Watch App.app */,
+				E5D985C12D8956AC006FC6EC /* Wrist Watch AppTests.xctest */,
+				E5D985CB2D8956AC006FC6EC /* Wrist Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,6 +204,74 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E5D985B12D8956AC006FC6EC /* Wrist Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5D985D62D8956AC006FC6EC /* Build configuration list for PBXNativeTarget "Wrist Watch App" */;
+			buildPhases = (
+				E5D985AE2D8956AC006FC6EC /* Sources */,
+				E5D985AF2D8956AC006FC6EC /* Frameworks */,
+				E5D985B02D8956AC006FC6EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E5D985B32D8956AC006FC6EC /* Wrist Watch App */,
+			);
+			name = "Wrist Watch App";
+			packageProductDependencies = (
+			);
+			productName = "Wrist Watch App";
+			productReference = E5D985B22D8956AC006FC6EC /* Wrist Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E5D985C02D8956AC006FC6EC /* Wrist Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5D985D92D8956AC006FC6EC /* Build configuration list for PBXNativeTarget "Wrist Watch AppTests" */;
+			buildPhases = (
+				E5D985BD2D8956AC006FC6EC /* Sources */,
+				E5D985BE2D8956AC006FC6EC /* Frameworks */,
+				E5D985BF2D8956AC006FC6EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5D985C32D8956AC006FC6EC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E5D985C42D8956AC006FC6EC /* Wrist Watch AppTests */,
+			);
+			name = "Wrist Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "Wrist Watch AppTests";
+			productReference = E5D985C12D8956AC006FC6EC /* Wrist Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E5D985CA2D8956AC006FC6EC /* Wrist Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5D985DC2D8956AC006FC6EC /* Build configuration list for PBXNativeTarget "Wrist Watch AppUITests" */;
+			buildPhases = (
+				E5D985C72D8956AC006FC6EC /* Sources */,
+				E5D985C82D8956AC006FC6EC /* Frameworks */,
+				E5D985C92D8956AC006FC6EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5D985CD2D8956AC006FC6EC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E5D985CE2D8956AC006FC6EC /* Wrist Watch AppUITests */,
+			);
+			name = "Wrist Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "Wrist Watch AppUITests";
+			productReference = E5D985CB2D8956AC006FC6EC /* Wrist Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		E5F7313F2D87F97B009458E6 /* Pomodoro */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5F731672D87F97C009458E6 /* Build configuration list for PBXNativeTarget "Pomodoro" */;
@@ -115,10 +279,12 @@
 				E5F7313C2D87F97B009458E6 /* Sources */,
 				E5F7313D2D87F97B009458E6 /* Frameworks */,
 				E5F7313E2D87F97B009458E6 /* Resources */,
+				E5F731A52D895540009458E6 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E5D985D42D8956AC006FC6EC /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E5F731422D87F97B009458E6 /* Pomodoro */,
@@ -187,6 +353,17 @@
 				LastUpgradeCheck = 1620;
 				ORGANIZATIONNAME = I;
 				TargetAttributes = {
+					E5D985B12D8956AC006FC6EC = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					E5D985C02D8956AC006FC6EC = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = E5D985B12D8956AC006FC6EC;
+					};
+					E5D985CA2D8956AC006FC6EC = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = E5D985B12D8956AC006FC6EC;
+					};
 					E5F7313F2D87F97B009458E6 = {
 						CreatedOnToolsVersion = 16.2;
 					};
@@ -217,11 +394,35 @@
 				E5F7313F2D87F97B009458E6 /* Pomodoro */,
 				E5F731532D87F97C009458E6 /* PomodoroTests */,
 				E5F7315D2D87F97C009458E6 /* PomodoroUITests */,
+				E5D985B12D8956AC006FC6EC /* Wrist Watch App */,
+				E5D985C02D8956AC006FC6EC /* Wrist Watch AppTests */,
+				E5D985CA2D8956AC006FC6EC /* Wrist Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E5D985B02D8956AC006FC6EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D985BF2D8956AC006FC6EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D985C92D8956AC006FC6EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5F7313E2D87F97B009458E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,10 +447,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E5D985AE2D8956AC006FC6EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5D985E12D895881006FC6EC /* WatchConnectivityManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D985BD2D8956AC006FC6EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D985C72D8956AC006FC6EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5F7313C2D87F97B009458E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5D985E52D8A3A0C006FC6EC /* WatchConnectivityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +494,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E5D985C32D8956AC006FC6EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5D985B12D8956AC006FC6EC /* Wrist Watch App */;
+			targetProxy = E5D985C22D8956AC006FC6EC /* PBXContainerItemProxy */;
+		};
+		E5D985CD2D8956AC006FC6EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5D985B12D8956AC006FC6EC /* Wrist Watch App */;
+			targetProxy = E5D985CC2D8956AC006FC6EC /* PBXContainerItemProxy */;
+		};
+		E5D985D42D8956AC006FC6EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5D985B12D8956AC006FC6EC /* Wrist Watch App */;
+			targetProxy = E5D985D32D8956AC006FC6EC /* PBXContainerItemProxy */;
+		};
 		E5F731562D87F97C009458E6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E5F7313F2D87F97B009458E6 /* Pomodoro */;
@@ -283,6 +522,149 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		E5D985D72D8956AC006FC6EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Wrist Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 62T943KY58;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wrist-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Wrist;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tomnowell.tomtimer;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomnowell.tomtimer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
+			};
+			name = Debug;
+		};
+		E5D985D82D8956AC006FC6EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Wrist Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 62T943KY58;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wrist-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Wrist;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tomnowell.tomtimer;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomnowell.tomtimer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
+			};
+			name = Release;
+		};
+		E5D985DA2D8956AC006FC6EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62T943KY58;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tomnowell.tomtimer.Wrist-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wrist Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wrist Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		E5D985DB2D8956AC006FC6EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62T943KY58;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tomnowell.tomtimer.Wrist-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wrist Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wrist Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		E5D985DD2D8956AC006FC6EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62T943KY58;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tomnowell.tomtimer.Wrist-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Wrist Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		E5D985DE2D8956AC006FC6EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62T943KY58;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tomnowell.tomtimer.Wrist-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Wrist Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 		E5F731682D87F97C009458E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -570,6 +952,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E5D985D62D8956AC006FC6EC /* Build configuration list for PBXNativeTarget "Wrist Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5D985D72D8956AC006FC6EC /* Debug */,
+				E5D985D82D8956AC006FC6EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5D985D92D8956AC006FC6EC /* Build configuration list for PBXNativeTarget "Wrist Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5D985DA2D8956AC006FC6EC /* Debug */,
+				E5D985DB2D8956AC006FC6EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5D985DC2D8956AC006FC6EC /* Build configuration list for PBXNativeTarget "Wrist Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5D985DD2D8956AC006FC6EC /* Debug */,
+				E5D985DE2D8956AC006FC6EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E5F7313B2D87F97B009458E6 /* Build configuration list for PBXProject "Pomodoro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import UserNotifications
+import WatchConnectivity
 
 struct ContentView: View {
     @AppStorage("timerDuration") private var timerDuration = 1500
@@ -70,7 +71,15 @@ struct ContentView: View {
             }
             .padding()
             .onAppear {
-                        timeRemaining = timerDuration  // Sync stored duration on launch
+                timeRemaining = timerDuration
+                WatchConnectivityManager.shared.sendTimerUpdate(timeRemaining)
+
+                // 🔹 Listen for updates from the watch
+                NotificationCenter.default.addObserver(forName: .timerUpdated, object: nil, queue: .main) { notification in
+                    if let newTime = notification.object as? Int {
+                        timeRemaining = newTime
+                    }
+                }
             }
         }
             
@@ -88,6 +97,7 @@ struct ContentView: View {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             if timeRemaining > 0 {
                 timeRemaining -= 1
+                WatchConnectivityManager.shared.sendTimerUpdate(timeRemaining)  // Sync with watch
             } else {
                 timerExpired()
             }
@@ -98,6 +108,7 @@ struct ContentView: View {
         timer?.invalidate()
         timerActive = false
         notifyTimerFinished()
+        WatchConnectivityManager.shared.sendTimerUpdate(0)  // Notify watch of expiration
         saveCompletedSession()
         
     }
@@ -111,6 +122,7 @@ struct ContentView: View {
         timer?.invalidate()
         timerActive = false
         timeRemaining = timerDuration
+        WatchConnectivityManager.shared.sendTimerUpdate(timeRemaining)  // Reset on watch
     }
     
     func notifyTimerFinished() {
